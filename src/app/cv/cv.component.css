@@ -1,0 +1,65 @@
+/*                                     */
+/*                                     */
+/*              Other                  */
+/*                                     */
+/*                                     */
+/*makes top part go a bit down, so its not under nav-bar*/
+.toppart {
+    padding-top: 80px;
+}
+
+/*cuts the left corner of the cv picture*/
+.cut-corner-left {
+    clip-path: polygon(0% 101%, 20% 0%, 100% 0%, 100% 101%);
+}
+
+/*div container, that holds content for each part*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #333;
+}
+
+/*                                     */
+/*                                     */
+/*                 CV                  */
+/*                                     */
+/*                                     */
+
+
+/*element that holds the content for the left part*/
+.cv-left {
+    margin: 40px 0 0 50px;
+}
+
+/*cv picture*/
+.cv-picture {
+    width: 50vw;
+}
+
+/*cv info container*/
+.cv-info {
+    display: flex;
+    width: 40vw;
+    margin: 15px 0 0 0;
+
+}
+
+/*left part of cv info*/
+.cv-info-left {
+    width: 15vw;
+}
+
+/* right part of cv info*/
+.cv-info-right {}
+
+
+/*                                     */
+/*                                     */
+/*             Free time               */
+/*                                     */
+/*                                     */
+
+.free-picture {
+    width: 62.5vw;
+}
