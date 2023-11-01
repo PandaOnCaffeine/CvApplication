@@ -10,7 +10,7 @@
 }
 
 .cut-corner-right {
-    clip-path: polygon(0% 101%, 0% 0%, 80% 0%, 100% 101%);
+    clip-path: polygon(0% 101%, 0% 0%, 70% 0%, 90% 101%);
 }
 
 /*div container, that holds content for each part*/

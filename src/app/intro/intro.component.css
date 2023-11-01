@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900");
+
 /*                                     */
 /*                                     */
 /*              Other                  */
@@ -10,7 +12,7 @@
 
 /*cuts the left corner of the cv picture*/
 .cut-corner-left {
-    clip-path: polygon(0% 101%, 20% 0%, 100% 0%, 100% 101%);
+    clip-path: polygon(20% 101%, 0% 0%, 100% 0%, 100% 101%);
 }
 
 /*div container, that holds content for each part*/
@@ -18,4 +20,88 @@
     display: flex;
     justify-content: space-between;
     border-bottom: 2px solid #333;
+}
+
+/*                                     */
+/*                                     */
+/*                intro                */
+/*                                     */
+/*                                     */
+
+/*Intro picture, Turned monotone*/
+.intro-picture {
+    width: 50vw;
+    filter: grayscale(100%);
+}
+
+/*Container for left side of intro component*/
+.intro-left {
+    
+}
+
+/*Intro text*/
+.intro-text {
+    padding: 80px 0 0 40px;
+}
+
+/*                                     */
+/*                                     */
+/*             Animation               */
+/*                                     */
+/*                                     */
+
+/*Container for headline*/
+.content {
+    position: relative;
+    margin: 10px 0 50px 35px;
+    font-family: "Poppins", sans-serif;
+    text-wrap: nowrap;
+}
+
+/*H1 elements*/
+.content h1 {
+    color: #fff;
+    font-size: 4.6vw;
+    position: absolute;
+}
+
+/*First h1 element*/
+.content h1:nth-child(1) {
+    color: transparent;
+    -webkit-text-stroke: 2.5px #900;
+}
+
+/*Second h1 element*/
+.content h1:nth-child(2) {
+    color: #900;
+    animation: animate 5s ease-in-out infinite;
+}
+
+/*Animation via Clip Path*/
+@keyframes animate {
+
+    0%,
+    100% {
+        clip-path: polygon(0% 45%,
+                16% 44%,
+                33% 50%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%);
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+                15% 65%,
+                34% 66%,
+                51% 62%,
+                67% 50%,
+                84% 45%,
+                100% 46%,
+                100% 100%,
+                0% 100%);
+    }
 }
