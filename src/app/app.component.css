@@ -1,11 +1,40 @@
 /*                                     */
 /*                                     */
-/*                Navbar               */
+/*                Other                */
 /*                                     */
 /*                                     */
 
 /**/
-.nav-bar{
+.scroll-fix {
+    scroll-margin-top: 80px;
+}
+
+/**/
+body {
+    /* MAYBE*/
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(51, 51, 51, 0.3) 50%, rgba(255, 255, 255, 1) 100%);
+}
+
+/**/
+footer {
+    /* Background color of the footer */
+    background-color: #333;
+    /* Text color */
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/*                                     */
+/*                                     */
+/*                Navbar               */
+/*                                     */
+/*                                     */
+
+
+
+/**/
+.nav-bar {
     position: fixed;
     background-color: #333;
     display: flex;
@@ -15,7 +44,7 @@
 }
 
 /**/
-.nav-list{
+.nav-list {
     position: absolute;
     display: flex;
     top: 50%;
@@ -24,20 +53,20 @@
 }
 
 /**/
-.nav-left{
+.nav-left {
     display: flex;
     align-items: center;
 }
 
 /**/
-.nav-title{
+.nav-title {
     margin: 0 0 0 25px;
     color: lightgray;
 }
 
 
 /**/
-.nav-link{
+.nav-link {
     color: lightgray;
     background-color: #535353;
     margin: 5px;
@@ -48,22 +77,8 @@
     box-shadow: 0px 0px 20px 5px rgba(150, 150, 150, 0.5) inset;
 }
 
-.nav-link:hover{
+.nav-link:hover {
     color: #fff;
     scale: 105%;
     cursor: pointer;
-}
-
-
-/*                                     */
-/*                                     */
-/*                Footer               */
-/*                                     */
-/*                                     */
-
-footer {
-    background-color: #333; /* Background color of the footer */
-    color: #fff; /* Text color */
-    text-align: center;
-    padding: 10px;
 }

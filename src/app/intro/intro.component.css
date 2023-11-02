@@ -19,14 +19,10 @@
 .container {
     display: flex;
     justify-content: space-between;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(0.25turn, rgba(255, 255, 255,1), rgba(51, 51, 51,0.5), #333);
+    border-image-slice: 1;
 }
-
-/*                                     */
-/*                                     */
-/*                intro                */
-/*                                     */
-/*                                     */
 
 /*Intro picture, Turned monotone*/
 .intro-picture {
@@ -34,45 +30,60 @@
     filter: grayscale(100%);
 }
 
-/*Container for left side of intro component*/
-.intro-left {
-    
-}
+/*                                     */
+/*                                     */
+/*             Intro Text              */
+/*                                     */
+/*                                     */
+
 
 /*Intro text*/
 .intro-text {
-    padding: 80px 0 0 40px;
+    padding: 0 0 0 40px;
+    font-size: 20px;
+    font-family: Dalia;
 }
 
 /*                                     */
 /*                                     */
-/*             Animation               */
+/*             Headline                */
 /*                                     */
 /*                                     */
 
+/*Container for intro headline*/
+.intro-headline {
+    display: flex;
+    align-items: center;
+    width: 50vw;
+    height: 8vw;
+}
+
 /*Container for headline*/
 .content {
-    position: relative;
-    margin: 10px 0 50px 35px;
     font-family: "Poppins", sans-serif;
     text-wrap: nowrap;
+    width: 80vw;
+    display: flex;
+    justify-content: space-around;
 }
 
 /*H1 elements*/
 .content h1 {
     color: #fff;
-    font-size: 4.6vw;
+    font-size: 4.4vw;
     position: absolute;
 }
 
 /*First h1 element*/
 .content h1:nth-child(1) {
+    transform: translate(0%, -40%);
     color: transparent;
     -webkit-text-stroke: 2.5px #900;
 }
 
 /*Second h1 element*/
 .content h1:nth-child(2) {
+    transform: translate(0%, -40%);
     color: #900;
     animation: animate 5s ease-in-out infinite;
 }
@@ -104,4 +115,28 @@
                 100% 100%,
                 0% 100%);
     }
+}
+
+/*                                     */
+/*                                     */
+/*           Not used rn               */
+/*                                     */
+/*                                     */
+
+/**/
+.intro-headline-left {
+    color: #333;
+    -webkit-text-stroke: 4px #333;
+    font-size: 10vw;
+    font-family: monospace;
+    margin-left: 20px;
+
+}
+
+/**/
+.intro-headline-right {
+    color: #333;
+    -webkit-text-stroke: 4px #333;
+    font-size: 10vw;
+    font-family: monospace;
 }
