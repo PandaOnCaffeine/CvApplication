@@ -4,12 +4,24 @@
 /*                                     */
 /*                                     */
 
+
+
 /**/
+.scroll-fix:target ~ .nav-move {
+    margin-top: -50px; /* Adjust this value to set the desired margin-top when scrolling */
+}
+
+/**/
+.middle-cut {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 65% 100%, 35% 100%, 0% 60%);
+}
+
+/*fixed scrolling so nav links to to the right height*/
 .scroll-fix {
     scroll-margin-top: 80px;
 }
 
-/**/
+/*the body*/
 body {
     /* MAYBE*/
     background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(51, 51, 51, 0.3) 50%, rgba(255, 255, 255, 1) 100%);
@@ -32,8 +44,8 @@ footer {
     padding: 10px;
 }
 
-/**/
-.footer-content{
+/*content for the footer*/
+.footer-content {
     font-family: math;
     font-size: 1vw;
 }
@@ -45,52 +57,77 @@ footer {
 /*                                     */
 /*                                     */
 
-/**/
+/*the navbar, duh*/
 .nav-bar {
-    position: fixed;
+    position: absolute;
     background-color: #333;
-    display: flex;
-    height: 80px;
+    height: 100px;
     width: 100vw;
     z-index: 1;
 }
 
 /**/
+.nav-stay {
+    position: absolute;
+    background-color: #333;
+    height: 50px;
+    width: 100vw;
+}
+
+/**/
+.nav-move {
+    position: fixed;
+    background-color: #333;
+    height: 50px;
+    width: 100vw;
+    margin-top: 50px;
+    top: 0;
+    transition: margin 0.3s;
+    z-index: 2;
+}
+
+/*Container for the nav links*/
 .nav-list {
     position: absolute;
     display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
-/**/
-.nav-left {
-    display: flex;
-    align-items: center;
-}
-
-/**/
+/*The TITLE*/
 .nav-title {
-    margin: 0 0 0 25px;
+    position: absolute;
     color: lightgray;
+    font-size: 2.3vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
 }
 
 
-/**/
+/*navigation buttons*/
 .nav-link {
     color: lightgray;
-    background-color: #535353;
+    background: radial-gradient(circle, rgba(51, 51, 51, 0) 0%, rgb(255, 0, 0) 100%);
     margin: 5px;
     padding: 10px 0 10px 0px;
-    width: 70px;
+    width: 65px;
+    height: 50px;
     border: none;
-    border-radius: 5px;
-    box-shadow: 0px 0px 20px 5px rgba(150, 150, 150, 0.5) inset;
 }
 
+/*Makes element 5% bigger on hover, set brighter text color and set cursor to pointer*/
 .nav-link:hover {
     color: #fff;
     scale: 105%;
     cursor: pointer;
+}
+
+/*Cuts element into a hexagon*/
+.hexa {
+    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
 }

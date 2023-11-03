@@ -20,7 +20,7 @@
     border-bottom: 2px solid #333;
 }
 
-/**/
+/*Buttom border if picture is on the right side*/
 .picture-rightside-border {
     border-bottom: 2px solid transparent;
     border-image: linear-gradient(0.25turn, rgba(255, 255, 255, 1), rgba(51, 51, 51, 0.7), #333);
@@ -43,18 +43,16 @@
     margin: 40px 0 0 50px;
 }
 
-
 /*cv info container*/
 .cv-info {
-   
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
     -webkit-text-stroke: 0.8px;
 }
 
-/**/
-.cv-text{
+/*Style for all text in cv section*/
+.cv-text {
     font-size: 1.1vw;
 }
 
@@ -76,6 +74,29 @@
 /*                                     */
 /*                                     */
 
+/*Left side of the freetime section*/
+.free-left {
+    width: 40vw;
+}
+
+/*Container for the pictures of the freetime section*/
+.free-picture-container {
+    height: 35.15vw;
+}
+
+/*Places the pictures on top of each other and all the way to the right*/
 .free-picture {
     width: 62.5vw;
+    position: absolute;
+    right: 0;
+}
+
+/*Cuts archery picture to fit*/
+.free-archery-cut {
+    clip-path: polygon(0% 101%, 20% 0%, 100% 0%, 0% 101%);
+}
+
+/*Cuts bouldering picture to fit*/
+.free-bouldering-cut {
+    clip-path: polygon(0% 100%, 100% 0%, 100% 0%, 100% 101%);
 }
