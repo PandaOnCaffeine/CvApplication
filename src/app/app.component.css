@@ -4,13 +4,6 @@
 /*                                     */
 /*                                     */
 
-
-
-/**/
-.scroll-fix:target ~ .nav-move {
-    margin-top: -50px; /* Adjust this value to set the desired margin-top when scrolling */
-}
-
 /**/
 .middle-cut {
     clip-path: polygon(0% 0%, 100% 0%, 100% 60%, 65% 100%, 35% 100%, 0% 60%);
@@ -18,7 +11,12 @@
 
 /*fixed scrolling so nav links to to the right height*/
 .scroll-fix {
-    scroll-margin-top: 80px;
+    scroll-margin-top: 30px;
+}
+
+/**/
+.scroll-fix-intro {
+    scroll-margin-top: 100px;
 }
 
 /*the body*/
@@ -70,20 +68,19 @@ footer {
 .nav-stay {
     position: absolute;
     background-color: #333;
+    margin-top: -50px;
     height: 50px;
     width: 100vw;
 }
 
 /**/
-.nav-move {
-    position: fixed;
-    background-color: #333;
+.nav-move-outer {
     height: 50px;
-    width: 100vw;
-    margin-top: 50px;
+    position: sticky;
+    background-color: #333;
     top: 0;
-    transition: margin 0.3s;
-    z-index: 2;
+    margin-top: 50px;
+    z-index: 1;
 }
 
 /*Container for the nav links*/

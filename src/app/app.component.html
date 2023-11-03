@@ -2,54 +2,38 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CV</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CV</title>
 </head>
 
 <body>
-  <div class="nav-stay">
-      <h1 class="nav-title">Cv Application</h1>
-  </div>
-  <div class="nav-move middle-cut">
-    <ul class="nav-list">
-      <input class="nav-link hexa" type="button" onClick="document.getElementById('intro').scrollIntoView();"
-        value="Intro" />
-      <input class="nav-link hexa" type="button" onClick="document.getElementById('cv').scrollIntoView();"
-        value="CV" />
-      <input class="nav-link hexa" type="button" onClick="document.getElementById('projects').scrollIntoView();"
-        value="Projekter" />
-      <input class="nav-link hexa" type="button" onClick="document.getElementById('contact').scrollIntoView();"
-        value="Kontakt" />
-    </ul>
-  </div>
-  <!-- <nav class="nav-bar middle-cut">
-    <div>
-    </div>
-    <div class="nav-move">
-      <ul class="nav-list">
-        <input class="nav-link hexa" type="button" onClick="document.getElementById('intro').scrollIntoView();"
-          value="Intro" />
-        <input class="nav-link hexa" type="button" onClick="document.getElementById('cv').scrollIntoView();"
-          value="CV" />
-        <input class="nav-link hexa" type="button" onClick="document.getElementById('projects').scrollIntoView();"
-          value="Projekter" />
-        <input class="nav-link hexa" type="button" onClick="document.getElementById('contact').scrollIntoView();"
-          value="Kontakt" />
-      </ul>
-    </div>
-  </nav> -->
-  <app-intro id="intro" class="scroll-fix"></app-intro>
-  <app-cv id="cv" class="scroll-fix"></app-cv>
-  <app-projects id="projects" class="scroll-fix"></app-projects>
-  <footer id="contact">
-    <div class="footer-content">
-      <p>&copy; 2023 Tue Madsen</p>
-      <p>Nørrevang 31, Kraghave, 4800 Nykøbing F.</p>
-      <p>TuePVM@gmail.com</p>
-      <p>29 10 03 01</p>
-    </div>
-  </footer>
+	<div class="nav-stay">
+		<h1 class="nav-title">Cv Application</h1>
+	</div>
+	<div class="nav-move-outer middle-cut">
+			<ul class="nav-list">
+				<input class="nav-link hexa" type="button" onClick="document.getElementById('intro').scrollIntoView();"
+					value="Intro" />
+				<input class="nav-link hexa" type="button" onClick="document.getElementById('cv').scrollIntoView();"
+					value="CV" />
+				<input class="nav-link hexa" type="button" onClick="document.getElementById('projects').scrollIntoView();"
+					value="Projekter" />
+				<input class="nav-link hexa" type="button" onClick="document.getElementById('contact').scrollIntoView();"
+					value="Kontakt" />
+			</ul>
+	</div>
+	<app-intro id="intro" class="scroll-fix-intro"></app-intro>
+	<app-cv id="cv" class="scroll-fix"></app-cv>
+	<app-projects id="projects" class="scroll-fix"></app-projects>
+	<footer id="contact">
+		<div class="footer-content">
+			<p>&copy; 2023 Tue Madsen</p>
+			<p>Nørrevang 31, Kraghave, 4800 Nykøbing F.</p>
+			<p>TuePVM@gmail.com</p>
+			<p>29 10 03 01</p>
+		</div>
+	</footer>
 </body>
 
 </html>
