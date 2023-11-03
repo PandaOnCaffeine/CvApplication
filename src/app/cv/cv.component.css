@@ -33,32 +33,41 @@
 /*                                     */
 /*                                     */
 
+/*cv picture*/
+.cv-picture {
+    width: 50vw;
+}
 
 /*element that holds the content for the left part*/
 .cv-left {
     margin: 40px 0 0 50px;
 }
 
-/*cv picture*/
-.cv-picture {
-    width: 50vw;
-}
 
 /*cv info container*/
 .cv-info {
-    display: flex;
-    width: 40vw;
-    margin: 15px 0 0 0;
+   
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    -webkit-text-stroke: 0.8px;
+}
 
+/**/
+.cv-text{
+    font-size: 1.1vw;
 }
 
 /*left part of cv info*/
 .cv-info-left {
     width: 15vw;
+    grid-area: 1 / 1 / 2 / 2;
 }
 
 /* right part of cv info*/
-.cv-info-right {}
+.cv-info-right {
+    grid-area: 1 / 2 / 2 / 3;
+}
 
 
 /*                                     */
